@@ -1,8 +1,11 @@
+import java.util.Scanner;
+
 /**
  * Created by webstddesign on 07.05.2016.
  */
 public class ComissionEmployeeTest {
 	public static void main(String arg[]){
+		Scanner sc=new Scanner(System.in);
 		ComissionEmployee employee=new ComissionEmployee("a","a","a",400,0.4);
 		System.out.printf("%n%s %s%n", "First name is",
 				employee.getFirstName());
