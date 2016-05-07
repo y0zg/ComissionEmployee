@@ -9,7 +9,7 @@ public class ComissionEmployeeTest {
 		TesttoStringClass tstr = new TesttoStringClass(11, "Value");
 		ComissionEmployee employee = new ComissionEmployee("John", "King", "Num10o99", 400, 0.4);
 		ComissionEmployee employee2 = new ComissionEmployee("John2", "King2", "Num22o99", 300, 0.1);
-		System.out.printf("%n%s %s%n", "First name is",
+		System.out.printf("%n %s %s%n", "First name is",
 				employee.getFirstName());
 		System.out.printf("%s %s%n", "Last name is",
 				employee.getLastName());
@@ -27,14 +27,29 @@ public class ComissionEmployeeTest {
 
 		System.out.printf("%n%s:%n%s",
 				"employee.earnings()", employee.earnings());
-		System.out.printf("%n%s:%n%s",
+		System.out.printf("%n%n%s:%n%s",
 				"Updated employee information obtained by toString", employee);
-		System.out.printf("%n%s:%n%s",
+		System.out.printf("%n%n%s:%n%s",
 				"Updated employee2 information obtained by toString", employee2);
 		System.out.printf(String.valueOf("\n" + tstr));
 		String hash = Integer.toHexString(tstr.hashCode());
 		System.out.printf(String.valueOf("\nhashHex:" + hash));
 		System.out.println("\ntstr hashcode: " + String.valueOf(tstr.hashCode()
 				+ " getClass: " + tstr.getClass()));
+
+	BaseComissionEmployee baseEmployee=new BaseComissionEmployee
+			("Andrew", "Gorton", "Num16k93", 200, 0.1,5000);
+		System.out.printf("%n %s %s%n %s %s %n%s %s %n%s %s %n%s %s",
+				"First name is:",baseEmployee.getFirstName(),
+				"Last name is:",baseEmployee.getLastName(),
+				"Security number",baseEmployee.getSocialSecurityNumber(),
+				"Comission rate",baseEmployee.getComissionRate(),
+				"Base salary",baseEmployee.getBaseSalary()
+
+		);
+		baseEmployee.setComissionRate(0.7);
+		System.out.printf("%n%n%s:%n%s",
+				"Updated baseEmployee information obtained by toString", baseEmployee);
+
 	}
 }
