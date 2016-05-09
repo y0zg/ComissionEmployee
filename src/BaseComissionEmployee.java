@@ -25,6 +25,6 @@ public class BaseComissionEmployee extends ComissionEmployee {
 	public double earnings(){
 		//for private variables in superclass this is not allowed
 		// if comissionRate and grossSales are private in superclass
-		return baseSalary+comissionRate*grossSales;
+		return getBaseSalary()+comissionRate*grossSales;
 	}
 }
